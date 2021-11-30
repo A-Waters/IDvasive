@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "IDvasive.app"
-               BlueprintName = "IDvasive"
-               ReferencedContainer = "container:IDvasive.xcodeproj">
+               BuildableName = "Idvasive.app"
+               BlueprintName = "Idvasive"
+               ReferencedContainer = "container:Idvasive.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "IDvasiveTests.xctest"
-               BlueprintName = "IDvasiveTests"
-               ReferencedContainer = "container:IDvasive.xcodeproj">
+               BuildableName = "IdvasiveTests.xctest"
+               BlueprintName = "IdvasiveTests"
+               ReferencedContainer = "container:Idvasive.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "IDvasive.app"
-            BlueprintName = "IDvasive"
-            ReferencedContainer = "container:IDvasive.xcodeproj">
+            BuildableName = "Idvasive.app"
+            BlueprintName = "Idvasive"
+            ReferencedContainer = "container:Idvasive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "IDvasive.app"
-            BlueprintName = "IDvasive"
-            ReferencedContainer = "container:IDvasive.xcodeproj">
+            BuildableName = "Idvasive.app"
+            BlueprintName = "Idvasive"
+            ReferencedContainer = "container:Idvasive.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

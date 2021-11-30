@@ -134,7 +134,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.IDvasive"
+        applicationId "com.Idvasive"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

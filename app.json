@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "IDvasive",
-    "slug": "IDvasive",
+    "name": "Idvasive",
+    "slug": "Idvasive",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "IDvasive"
+  "name": "Idvasive"
 }
