@@ -29,7 +29,6 @@ function camera_mod()
 
     const test_image = (imagetensor) => 
     {
-        // let insert = tf.expandDims(imagetensor, axis=0)
         let insert = imagetensor.expandDims(0)
 
         let prediction = model.predict(insert)
@@ -46,7 +45,7 @@ function camera_mod()
             
             let result = await test_image(nextImageTensor)
             
-            console.log("RESULT", result.arraySync()[0][0][0])
+            // console.log("RESULT", result.arraySync()[0][0][0])
       
             // if autorender is false you need the following two lines.
             // updatePreview();
