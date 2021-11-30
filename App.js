@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import * as tf from '@tensorflow/tfjs';
 import '@tensorflow/tfjs-react-native';
+import Camera_mod from './src/Camera';
 
 export default function App() {
 
@@ -10,7 +11,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>it works</Text>
+      <Camera_mod/>
       <StatusBar style="auto" />
     </View>
   );
