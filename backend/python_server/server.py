@@ -18,7 +18,7 @@ class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         # self._set_response()
         self.send_response(200)
-        self.send_header('Content-type', 'image/jpeg')
+        self.send_header('Content-type', 'image/png')
         self.end_headers()
         self.wfile.write(load_binary('file.jpg'))
 
@@ -28,8 +28,8 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
 
         working = True
-        
-        print(self.headers)
+
+        workfile = 'file.png'
 
         if "Content-Length" in self.headers:
             content_length = int(self.headers["Content-Length"])
@@ -38,7 +38,7 @@ class Handler(BaseHTTPRequestHandler):
                 out_file.write(body)
             
         elif "chunked" in self.headers.get("Transfer-Encoding", ""):
-            with open('file', "wb") as out_file:
+            with open(workfile, "wb") as out_file:
             
                 while True:
                     line = self.rfile.readline().strip()
@@ -63,8 +63,8 @@ class Handler(BaseHTTPRequestHandler):
 
         if working:
             nn = wrapper()
-            print(nn.classify('file'))
-            self.wfile.write(nn.classify('file').encode('utf-8')) 
+            print(nn.classify(workfile))
+            self.wfile.write(nn.classify(workfile).encode('utf-8')) 
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
     """ This class allows to handle requests in separated threads.
