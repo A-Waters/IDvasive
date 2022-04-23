@@ -8,7 +8,9 @@ def load_binary(filename):
     with open(filename, 'rb') as file_handle:
         return file_handle.read()
 
+workfile = 'file.png'
 class Handler(BaseHTTPRequestHandler):
+    
 
     def _set_response(self):
         self.send_response(200)
@@ -20,7 +22,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'image/png')
         self.end_headers()
-        self.wfile.write(load_binary('file.jpg'))
+        self.wfile.write(load_binary(workfile))
 
     def do_POST(self):
         self._set_response()
@@ -29,12 +31,12 @@ class Handler(BaseHTTPRequestHandler):
 
         working = True
 
-        workfile = 'file.png'
+
 
         if "Content-Length" in self.headers:
             content_length = int(self.headers["Content-Length"])
             body = self.rfile.read(content_length)
-            with open('file', "wb") as out_file:
+            with open(workfile, "wb") as out_file:
                 out_file.write(body)
             
         elif "chunked" in self.headers.get("Transfer-Encoding", ""):
