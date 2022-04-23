@@ -14,7 +14,7 @@ class wrapper():
         self.img_height = 360
         self.img_width = 360
         self.num_classes = 4
-        self.classes = ['Black_Spruce_Spring', 'Eastern_Hemlock_Spring', 'Northern_White_Cedar_Spring', 'Northern_White_Pine_Spring']
+        self.classes = ['Black_Spruce_Spring', 'Northern_White_Cedar_Spring', 'Eastern_Hemlock_Spring', 'Northern_White_Pine_Spring']
 
         data_augmentation = keras.Sequential(
         [
