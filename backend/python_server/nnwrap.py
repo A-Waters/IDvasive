@@ -3,13 +3,18 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 import numpy as np
+from PIL import ImageFile
+
 
 
 class wrapper():
     def __init__(self) -> None:
+
+        ImageFile.LOAD_TRUNCATED_IMAGES = True
         self.img_height = 360
         self.img_width = 360
         self.num_classes = 4
+        self.classes = ['Black_Spruce_Spring', 'Eastern_Hemlock_Spring', 'Northern_White_Cedar_Spring', 'Northern_White_Pine_Spring']
 
         data_augmentation = keras.Sequential(
         [
@@ -58,5 +63,6 @@ class wrapper():
         input_arr = np.array([input_arr])  # Convert single image to a batch.
         predictions = self.model.predict(input_arr)
         print(predictions)
-        return predictions
+        print(self.classes[np.argmax(predictions)])
+        return self.classes[np.argmax(predictions)]
 
