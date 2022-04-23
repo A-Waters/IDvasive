@@ -30,7 +30,7 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
 
         working = True
-        print(self.headers)
+        # print(self.headers)
 
 
         if "Content-Length" in self.headers:
@@ -45,7 +45,7 @@ class Handler(BaseHTTPRequestHandler):
 
         if working:
             nn = wrapper()
-            print(nn.classify(workfile))
+            # print(nn.classify(workfile))
             self.wfile.write(nn.classify(workfile).encode('utf-8')) 
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
