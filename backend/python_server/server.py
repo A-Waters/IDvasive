@@ -28,6 +28,8 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
 
         working = True
+        
+        print(self.headers)
 
         if "Content-Length" in self.headers:
             content_length = int(self.headers["Content-Length"])
